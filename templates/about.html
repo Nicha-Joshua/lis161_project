@@ -1,0 +1,76 @@
+{%extends 'base.html' %}
+{% block title %}About{% endblock %}
+{%block content %}
+
+      <section class="sub-header">
+          <nav>
+            <a href="index.html"><img src="static/img/academic.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+              <ul>
+                  <li><a href="{{url_for('index') }}">HOME</a></li>
+                  <li><a href="{{url_for('about') }}">ABOUT</a></li>
+                  <li><a href="{{url_for('tutorpage') }}">SERVICES</a></li>
+                  <li><a href="{{url_for('contact') }}">CONTACT</a></li>
+                  <li><a href="{{url_for('signin') }}">SIGN UP AS A TUTOR</a></li>
+
+
+                  <!------<li><a href="{{url_for('tutee') }}">SIGN UP AS A TUTEE</a></li>
+                  <li><a href="{{url_for('login') }}">LOG IN</a></li>---->
+
+                </ul>
+              </div>
+              <i class="fa fa-bars" onclick="showMenu()"></i>
+          </nav>
+          <h10> Our Story </h10>
+      </section>
+
+<!------------ About Us Content -------------->
+
+<section class="about-us">
+    <div class= "row">
+        <div class="about-col">
+            <h1> We are your partner in Academic Excellence </h1>
+
+            <p6> As we shift to online learning, students are facing unprecedented challenges. A year into community quarantine, educators are still having a hard time adjusting to the new way of teaching and connecting to the learners. Students find it hard to understand the lessons as they are lacking connection with their teachers. <br> <br>
+
+At Academic Medic, we believe that when people get together, great things happen. That’s why we created this platform to connect educators and students and achieve everyone's academic goals. All of our tutors meet or exceed our minimum requirements to be a tutor. We set extremely high standards for our tutor applicants, ensuring that we only put our students in the hands of the most qualified people. We aim to help students amidst this online learning setup, and give them access to the education they deserve.
+ </p6> <br> <br>
+            <a href="{{url_for('tutorpage') }}" class="hero-btn red-btn"> EXPLORE NOW </a>
+        </div>
+        <div class="about-col">
+            <img src="static/img/about.png">
+        </div>
+    </div>
+
+</section>
+<!------------ Call To Action --------------->
+
+<section class="footer">
+      <h9> About Us </h9> <br> <br>
+      <p5> As we shift to online learning, students are facing unprecedented challenges. <br>We aim to connect the educators and learners in achieving academic and professional goals.
+ </p5>
+    <div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+    </div>
+</section>
+
+
+
+<!--------JavaScript for Toggle Menu------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+      </script>
+
+{% endblock %}

@@ -1,0 +1,104 @@
+{%extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+{%block content %}
+
+      <section class="sub-header">
+          <nav>
+            <a href="index.html"><img src="static/img/academic.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+              <ul>
+                  <li><a href="{{url_for('index') }}">HOME</a></li>
+                  <li><a href="{{url_for('about') }}">ABOUT</a></li>
+                  <li><a href="{{url_for('tutorpage') }}">SERVICES</a></li>
+                  <li><a href="{{url_for('contact') }}">CONTACT</a></li>
+                  <li><a href="{{url_for('signin') }}">SIGN UP AS A TUTOR</a></li>
+
+
+                  <!---<li><a href="{{url_for('tutee') }}">SIGN UP AS A TUTEE</a></li>
+                  <li><a href="{{url_for('login') }}">LOG IN</a></li>-->
+
+                </ul>
+              </div>
+              <i class="fa fa-bars" onclick="showMenu()"></i>
+          </nav>
+          <h10> Contact Us </h10>
+      </section>
+
+<!------------ contact us -------------->
+<section class="location">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15440.392379287276!2d121.0527829776733!3d14.650372696454111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b77b3e9bca1d%3A0x73e045203788bc1e!2sUniversity%20of%20the%20Philippines%20System!5e0!3m2!1sen!2sph!4v1623091659013!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</section>
+
+<section class="contact-us">
+
+    <div class="row">
+        <div class="contact-col">
+            <div>
+            <i class="fa fa-home"></i>
+            <span>
+                <h5> U.P. Campus , University of the Philippines, 1101 Quezon City, <br>Metro Manila </h5>
+                <p> Visit us here</p>
+            </span>
+            </div>
+             <div>
+            <i class="fa fa-phone"></i>
+            <span>
+                <h5> +63 9271849766 </h5>
+                <p> Monday to Saturday, 10 AM to 5 PM </p>
+            </span>
+            </div>
+             <div>
+            <i class="fa fa-envelope-o"></i>
+            <span>
+                <h5> academic.medic@gmail.com </h5>
+                <p> Email us your query </p>
+            </span>
+            </div>
+        </div>
+<div class="contact-col">
+
+    <form action="">
+        <input type="text" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter email address" required>
+        <input type="text" placeholder="Enter your tutor" required>
+        <textarea rows="8" placeholder="Your feedback" required></textarea>
+        <button type="submit" class="hero-btn red-btn"> Send Message </button>
+        </form>
+
+</div>
+    </div>
+
+</section>
+<!------------ Call To Action --------------->
+
+<section class="footer">
+      <h9> About Us </h9> <br> <br>
+      <p5> As we shift to online learning, students are facing unprecedented challenges. <br>We aim to connect the educators and learners in achieving academic and professional goals.
+ </p5>
+    <div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+    </div>
+</section>
+
+
+
+<!--------JavaScript for Toggle Menu------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+      </script>
+
+{% endblock %}

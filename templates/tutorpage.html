@@ -1,0 +1,93 @@
+{%extends 'base.html' %}
+{% block title %}Services{% endblock %}
+{%block content %}
+
+<section class="sub-header">
+          <nav>
+            <a href="index.html"><img src="static/img/academic.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+              <ul>
+                  <li><a href="{{url_for('index') }}">HOME</a></li>
+                  <li><a href="{{url_for('about') }}">ABOUT</a></li>
+                  <li><a href="{{url_for('tutorpage') }}">SERVICES</a></li>
+                  <li><a href="{{url_for('contact') }}">CONTACT</a></li>
+                  <li><a href="{{url_for('signin') }}">SIGN UP AS A TUTOR</a></li>
+
+
+                  <!---<li><a href="{{url_for('tutee') }}">SIGN UP AS A TUTEE</a></li>
+                  <li><a href="{{url_for('login') }}">LOG IN</a></li>--->
+
+                </ul>
+              </div>
+              <i class="fa fa-bars" onclick="showMenu()"></i>
+          </nav>
+          <h10> What we Offer </h10>
+      </section>
+
+<!------------ Services -------------->
+<section class="programs">
+    <h1> CHOOSE YOUR ACADEMIC TUTOR </h1>
+    <p> The Academic Medic offers various services that ensures quality experience for all the students and tutees. <br> We provide trusted tutoring services for all stages of education.
+</p>
+
+     <div class="row justify-content-evenly">
+         <a href="/tutorlist/Elementary">
+        <div class="service-col">
+            <img src="static/img/elementary.png">
+            <div class="layer">
+                <h3> ELEMENTARY </h3>
+            </div>
+         </a>
+        </div>
+         <a href="/tutorlist/Highschool">
+        <div class="service-col">
+            <img src="static/img/highschool.png">
+            <div class="layer">
+                <h3> HIGHSCHOOL </h3>
+            </div>
+         </a>
+        </div>
+
+         <a href="/tutorlist/College">
+        <div class="service-col">
+            <img src="static/img/college.png">
+            <div class="layer">
+                <h3> COLLEGE </h3>
+            </div>
+         </a>
+        </div>
+    </div>
+
+      </section>
+
+<!------------ Call To Action --------------->
+
+<section class="footer">
+      <h9> About Us </h9> <br> <br>
+      <p5> As we shift to online learning, students are facing unprecedented challenges. <br>We aim to connect the educators and learners in achieving academic and professional goals. </p5>
+    <div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+    </div>
+</section>
+
+
+
+
+<!--------JavaScript for Toggle Menu------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+      </script>
+
+{% endblock %}

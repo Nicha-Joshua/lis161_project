@@ -1,0 +1,30 @@
+
+{%extends 'base.html' %}
+{% block title %}{{ tutor_type }} Tutors {% endblock %}
+{%block content %}
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1e3256;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="{{url_for('index') }}" style="color:white;">Home </a>
+          <a class="nav-item nav-link" href="{{url_for('about') }}" style="color:white;">About</a>
+          <a class="nav-item nav-link" href="{{url_for('tutorpage') }}" style="color:white;">Services</a>
+          <a class="nav-item nav-link" href="{{url_for('contact') }}" style="color:white;">Contact</a>
+        </div>
+      </div>
+    </nav><br>
+    <div class="list">
+    <h1 style="color:black;"> List of {{ tutor_type }} Based Tutors </h1>
+    <ul>
+        {% for tutor in tutors %}
+        <li> <a href="{{ url_for('tutor', tutor_id=tutor.id) }}">{{ tutor.name }}</a></li>
+        {% endfor %}
+    </ul><br>
+</div>
+
+
+
+{% endblock %}
